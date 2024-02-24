@@ -1,0 +1,53 @@
+baseURL: https://bqliang.me/
+languageCode: zh-cn
+title: bqlaing
+theme: ["PaperMod"]
+
+menu:
+  main:
+    - identifier: "home"
+      name: "🏠 首页"
+      url: "/"
+      weight: 1
+    # - identifier: "all_blogs"
+    #   name: "所有文章"
+    #   url: "/all_blogs"
+    #   weight: 2
+    - identifier: "about"
+      name: "📑 简历"
+      url: "/cv.pdf"
+      weight: 3
+
+params:
+  description: "bqlaing's personal information"
+  # author: bqliang
+  defaultTheme: dark # auto, dark, light
+  disableThemeToggle: false
+  
+  profileMode:
+    enabled: true
+    title: "<Title>" # optional default will be site title
+    subtitle: "👨‍💻 我挥舞着键盘和本子，发誓要把世界写个明明白白"
+    imageUrl: "avatar.png" # optional
+    imageTitle: "avatar" # optional
+    imageWidth: 150 # custom size
+    imageHeight: 150 # custom size
+    buttons:
+      - name: "🔎 About me"
+        url: "/about"
+      - name: "📝 My blog"
+        url: "https://juejin.cn/user/941602739853453/posts"
+
+  socialIcons: 
+    - name: "bilibili"
+      url: "https://space.bilibili.com/28996856/video"
+    - name: "github"
+      url: "https://github.com/bqliang"
+    - name: "stackoverflow"
+      url: "https://stackoverflow.com/users/19908154/bqliang"
+    # - name: "email"
+    #   url: "mailto:bqlaing@outlook.com"
+    # - name: "telegram"
+    #   url: "https://t.me/bqliang"
+    # - name: "steam"
+    #   url: "https://steamcommunity.com/profiles/76561199476892169/"
