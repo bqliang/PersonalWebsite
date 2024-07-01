@@ -33,9 +33,9 @@ params:
     imageWidth: 150 # custom size
     imageHeight: 150 # custom size
     buttons:
-      - name: "🔎 About me"
+      - name: "🔎 关于我"
         url: "/about"
-      - name: "📝 My blog"
+      - name: "📝 我的文章"
         url: "https://juejin.cn/user/941602739853453/posts"
 
   socialIcons: 
