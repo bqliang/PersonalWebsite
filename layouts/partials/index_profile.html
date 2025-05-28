@@ -42,7 +42,7 @@
                     <!-- 如果 URL 中带有 "juejin"，则加粗显示 -->
                     {{- if (findRE "juejin" .url) }} <b> {{- end }}
                         {{ .name }}
-                    {{- if (findRE "juejin" .url) }} <b> {{- end }}
+                    {{- if (findRE "juejin" .url) }} </b> {{- end }}
                     {{- if (findRE "://" .url) }}&nbsp;
                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
