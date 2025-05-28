@@ -35,8 +35,10 @@ params:
     buttons:
       - name: "🔎 关于我"
         url: "/about"
-      - name: "📝 我的文章"
+      - name: "📰 我的文章"
         url: "https://juejin.cn/user/941602739853453/posts"
+      - name: "📒 我的笔记"
+        url: "https://www.yuque.com/bqliang/nghnzx"
 
   socialIcons: 
     - name: "bilibili"
