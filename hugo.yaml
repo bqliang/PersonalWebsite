@@ -33,9 +33,9 @@ params:
     imageWidth: 150 # custom size
     imageHeight: 150 # custom size
     buttons:
-      - name: "📰 我的文章"
+      - name: "📰 掘金博客"
         url: "https://juejin.cn/user/941602739853453/posts"
-      - name: "📒 我的笔记"
+      - name: "📒 学习笔记"
         url: "https://www.yuque.com/bqliang/nghnzx"
 
   socialIcons: 
