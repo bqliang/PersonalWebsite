@@ -1,0 +1,11 @@
+{{- $u := urls.Parse .Destination -}}
+<a href="{{ .Destination | safeURL }}"
+  {{- with .Title }} title="{{ . }}"{{ end -}}
+  {{- /* 只对掘金和语雀的链接在新窗口打开 */ -}}
+  {{- if or (strings.HasSuffix $u.Host "juejin.cn") (strings.HasSuffix $u.Host "yuque.com") -}}
+  target="_blank" rel="noopener noreferrer"
+  {{- end -}}
+>
+  {{- .Text | safeHTML -}}
+</a>
+{{- /* chomp trailing newline */ -}}
