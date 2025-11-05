@@ -10,3 +10,27 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+/* 定义文章索引链接的样式 */
+.article-list-link a {
+  font-size: 16px; /* 字体稍小 (副标题是 18px) */
+  font-weight: 500; /* 字体加粗，区别于副标题的 400 */
+  text-decoration: none; /* 默认无下划线 */
+  color: #007bff; /* 浅色模式下的蓝色 */
+  transition: all 0.2s ease; /* 增加平滑过渡效果 */
+}
+
+/* 鼠标悬停时显示下划线，并改变颜色 */
+.article-list-link a:hover {
+  color: #0056b3; /* 浅色模式 - 悬停时加深蓝色 */
+  text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+/* 暗黑模式下的专属颜色 */
+.dark .article-list-link a {
+  color: #58a6ff; /* 暗黑模式下使用更亮、更易读的蓝色 */
+}
+
+.dark .article-list-link a:hover {
+  color: #80bfff; /* 暗黑模式 - 悬停时颜色更亮 */
+}
