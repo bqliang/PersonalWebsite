@@ -149,25 +149,19 @@ body {
   z-index: 5;
 }
 
-/* 3. Android 机器人浮印 (已修改：贴底、居中、不倾斜) */
+/* 3. Android 机器人浮印 */
 #watermark-android {
-  width: 35vw; /* 视窗宽度的 35% */
-  height: 20.4934vw;
+  width: 21vw; /* 视窗宽度的 21% */
+  height: 12.296vw;
   
-  /* (修改) 移除 top，改为 bottom: 0 来贴住底边 */
-  bottom: 0;
+  /* top: 0 贴住顶边 */
+  top: 0;
   
-  /* (保持) 配合 transform 实现水平居中 */
-  left: 50%; 
+  /* right: 0 贴住右边 */
+  right: 0; 
   
-  /* (修改) 
-     1. 仅使用 translateX(-50%) 来水平居中
-     2. 移除了 translateY (不再需要垂直居中)
-     3. 移除了 rotate(-15deg) (不再倾斜)
-  */
-  transform: translateX(-50%);
+  transform: rotate(-180deg) translateX(10%);
   
-  /* (保持不变) */
   background-image: url("/android.svg");
 }
 
