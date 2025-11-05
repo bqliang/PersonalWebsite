@@ -17,6 +17,14 @@
 {{- print " dark" }}
 {{- end -}}
 " id="top">
+{{- /* --- 在这里添加水印 DIV (仅在首页) --- */ -}}
+    {{- if .IsHome }}
+    <div class="watermark" id="watermark-android"></div>
+    <div class="watermark" id="watermark-compose"></div>
+    <div class="watermark" id="watermark-jetpack"></div>
+    {{- end -}}
+    {{- /* --- 水印 DIV 结束 --- */ -}}
+
     {{- partialCached "header.html" . .Page -}}
 
     {{- /* --- 滚动文字横幅 (JS 控制版) --- */ -}}

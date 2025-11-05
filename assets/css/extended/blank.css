@@ -116,3 +116,68 @@ body {
 .dark .scrolling-banner a:hover {
   color: #58a6ff;
 }
+
+/* 1. 通用浮印样式 */
+.watermark {
+  position: fixed; /* 固定在屏幕上，不随滚动条滚动 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
+  /* (关键) 确保浮印在内容之下 */
+  z-index: 0; 
+  
+  /* (关键) 使其不可被点击，鼠标事件会穿透 */
+  pointer-events: none;
+  
+  /* (关键) 使用透明度来实现水印效果 */
+  /* 注意：我们不再需要 color: var(--tertiary); 
+     因为我们现在显示的是彩色图片 */
+  opacity: 0.08; /* 您可以调整这个透明度，0.08 比较低调 */
+  
+  /* 添加一个微妙的模糊效果 */
+  /* filter: blur(1px); */
+}
+
+/* 2. (关键) 确保您的主要内容浮在水印之上 */
+.header {
+  position: relative;
+  z-index: 10;
+}
+.main {
+  position: relative;
+  z-index: 5;
+}
+
+/* 3. Android 机器人浮印 (使用 background-image) */
+#watermark-android {
+  width: 35vw; /* 视窗宽度的 35% */
+  height: 35vw;
+  top: 50%; /* 垂直居中 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%) rotate(-15deg); /* 倾斜一点 */
+  background-image: url("/android.svg");
+}
+
+/* 4. Compose Logo 浮印 (使用 background-image) */
+#watermark-compose {
+  width: 25vw;
+  height: 25vw;
+  top: 15vh; /* 放在左上角 */
+  left: 5vw;
+  transform: rotate(10deg);
+  opacity: 0.06; /* 可以让它更淡一点 */
+  background-image: url("/compose.svg");
+}
+
+/* 5. Jetpack Logo 浮印 (使用 background-image) */
+#watermark-jetpack {
+  width: 25vw;
+  height: 25vw;
+  bottom: 10vh; /* 放在右下角 */
+  right: 5vw;
+  transform: rotate(-5deg);
+  opacity: 0.06;
+
+  background-image: url("/jetpack.svg");
+}
