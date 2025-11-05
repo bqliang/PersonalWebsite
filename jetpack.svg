@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 600 600"
+   version="1.1"
+   id="svg92"
+   sodipodi:docname="Android-Badges-Jetpackv3.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview94"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.7116667"
+     inkscape:cx="300.58422"
+     inkscape:cy="300.58422"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="backplate" />
+  <defs
+     id="defs27">
+    <style
+       id="style2">.cls-1{fill:none;}.cls-2{isolation:isolate;}.cls-3{clip-path:url(#clip-path);}.cls-4{opacity:0.2;mix-blend-mode:multiply;}.cls-5{clip-path:url(#clip-path-3);}.cls-6{fill:#fff;}.cls-7{fill:#eeeff1;}.cls-8{clip-path:url(#clip-path-5);}.cls-9{fill:#f6f6f7;}.cls-10{fill:#eeeef0;}.cls-11{opacity:0.3;}.cls-12{fill:url(#linear-gradient);}.cls-13{fill:url(#linear-gradient-2);}.cls-14{fill:url(#linear-gradient-3);}.cls-15{fill:url(#linear-gradient-4);}.cls-16{fill:url(#linear-gradient-5);}.cls-17{fill:url(#linear-gradient-6);}.cls-18{fill:#093042;}.cls-19{fill:#3ddc84;}.cls-20{fill:#37bf6e;}.cls-21{fill:#4285f4;}</style>
+    <clipPath
+       id="clip-path">
+      <rect
+         class="cls-1"
+         width="600"
+         height="600"
+         id="rect4" />
+    </clipPath>
+    <clipPath
+       id="clip-path-3">
+      <rect
+         class="cls-1"
+         x="28"
+         y="33"
+         width="544"
+         height="544"
+         id="rect7" />
+    </clipPath>
+    <clipPath
+       id="clip-path-5">
+      <path
+         class="cls-1"
+         d="M300,526C175.18,526,74,424.82,74,300S175.18,74,300,74,526,175.18,526,300,424.82,526,300,526"
+         id="path10" />
+    </clipPath>
+    <linearGradient
+       id="linear-gradient"
+       x1="142.87"
+       y1="311.12"
+       x2="84.59"
+       y2="369.39"
+       gradientTransform="translate(269.68 9.03) rotate(45)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.06"
+         stop-color="#073042"
+         stop-opacity="0.4"
+         id="stop13" />
+      <stop
+         offset="1"
+         stop-color="#093042"
+         stop-opacity="0"
+         id="stop15" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="280.1"
+       y1="449.46"
+       x2="221.35"
+       y2="508.21"
+       xlink:href="#linear-gradient"
+       gradientTransform="matrix(1, 0, 0, 1, 0, 0)" />
+    <linearGradient
+       id="linear-gradient-3"
+       x1="430.18"
+       y1="232.52"
+       x2="397.98"
+       y2="264.72"
+       xlink:href="#linear-gradient"
+       gradientTransform="matrix(1, 0, 0, 1, 0, 0)" />
+    <linearGradient
+       id="linear-gradient-4"
+       x1="358.6"
+       y1="157.16"
+       x2="332.28"
+       y2="183.49"
+       xlink:href="#linear-gradient"
+       gradientTransform="matrix(1, 0, 0, 1, 0, 0)" />
+    <linearGradient
+       id="linear-gradient-5"
+       x1="-169.49"
+       y1="278.17"
+       x2="-261.64"
+       y2="278.17"
+       gradientTransform="matrix(0.71, -0.71, 0.96, 0.96, -48.04, -32.01)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.06"
+         stop-color="#073042"
+         stop-opacity="0.4"
+         id="stop21" />
+      <stop
+         offset="0.75"
+         stop-color="#093042"
+         stop-opacity="0"
+         id="stop23" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-6"
+       x1="-168.87"
+       y1="423.45"
+       x2="-262.16"
+       y2="423.45"
+       xlink:href="#linear-gradient-5" />
+  </defs>
+  <title
+     id="title29">Android Badges Jetpack v3</title>
+  <g
+     class="cls-2"
+     id="g90">
+    <g
+       id="backplate">
+      <path
+         class="cls-18"
+         d="m 93.87,321.19 v 19 a 19,19 0 0 1 13.44,32.43 c -2.42,2.43 -12.86,10.42 -26,17.9 -17.59,10 -27.29,12 -31.2,12.38 0.4,-4.34 2.7,-13.3 10.48,-27.69 8.1,-15 17.34,-27 19.83,-29.47 a 18.89,18.89 0 0 1 13.44,-5.55 v -19 0 A 37.86,37.86 0 0 0 67,332.29 c -9.82,9.83 -49.16,67.2 -31.33,85 3.23,3.22 7.74,4.57 13,4.57 24,0 64,-27.85 72,-35.9 A 38,38 0 0 0 93.81,321.15 Z"
+         id="path75"
+         style="display:inline;fill:#aad400;fill-opacity:1" />
+      <path
+         class="cls-18"
+         d="m 259,470.59 a 37.85,37.85 0 0 0 -26.85,-11.11 v 19 a 19,19 0 0 1 13.44,32.43 c -2.43,2.43 -12.87,10.42 -26,17.9 -17.59,10 -27.29,12 -31.2,12.38 0.4,-4.34 2.7,-13.3 10.48,-27.69 8.1,-15 17.34,-27 19.84,-29.47 a 18.85,18.85 0 0 1 13.43,-5.55 v -19 0 a 37.85,37.85 0 0 0 -26.85,11.11 c -9.82,9.82 -49.16,67.19 -31.33,85 3.23,3.22 7.74,4.58 13,4.58 24,0 64,-27.86 72,-35.91 A 38,38 0 0 0 259,470.59 Z"
+         id="path77"
+         style="display:inline;fill:#aad400" />
+      <path
+         class="cls-19"
+         d="m 382.39,273.41 a 8.15,8.15 0 1 1 11.53,0 8.16,8.16 0 0 1 -11.53,0 m -63.75,-63.74 a 8.16,8.16 0 1 1 11.54,0 8.16,8.16 0 0 1 -11.54,0 m -24,226.27 L 400,330.51 a 96.22,96.22 0 0 0 19.16,-89.77 l 31.49,-8.43 a 3.3911687,3.3911687 0 1 0 -1.76,-6.55 L 417,234.3 A 102.47,102.47 0 0 0 357.76,175 l 8.54,-31.88 a 3.3911687,3.3911687 0 0 0 -6.55,-1.76 l -8.44,31.49 A 96.24,96.24 0 0 0 261.53,192 L 156.11,297.45 Z"
+         id="path79"
+         style="display:inline" />
+      <path
+         class="cls-20"
+         d="M137.27,278.62l58.39-58.4,21.11-21.1a37.28,37.28,0,0,1,52.72,52.71L190,331.33h0Z"
+         id="path81" />
+      <path
+         class="cls-20"
+         d="M312.41,453.74h0l79.5-79.49a37.28,37.28,0,0,0-52.72-52.72l-21.1,21.11L259.69,401Z"
+         id="path83" />
+      <path
+         class="cls-21"
+         d="m 261.77,244.11 a 37.28,37.28 0 0 0 -52.72,-52.72 l -21.11,21.11 -60.72,60.71 -11,11 a 6.7,6.7 0 0 0 0,9.45 L 159.47,337 a 6.7,6.7 0 0 0 9.45,0 l 11,-11 v 0 z"
+         id="path85"
+         style="display:inline" />
+      <path
+         class="cls-21"
+         d="m 400,382.34 a 37.28,37.28 0 0 0 -52.72,-52.72 l -21.11,21.11 -60.72,60.71 -11,11 a 6.7,6.7 0 0 0 0,9.45 l 43.27,43.27 a 6.72,6.72 0 0 0 9.45,0 l 11,-11 v 0 z"
+         id="path87"
+         style="display:inline" />
+    </g>
+  </g>
+</svg>
