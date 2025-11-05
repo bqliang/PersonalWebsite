@@ -34,3 +34,85 @@ body {
 .dark .article-list-link a:hover {
   color: #80bfff; /* 暗黑模式 - 悬停时颜色更亮 */
 }
+
+
+/* --- 滚动文字横幅 --- */
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* 移动原始宽度的距离 (因为我们复制了一份) */
+  }
+}
+
+/* 1. 外层容器 */
+.scrolling-banner {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--tertiary);
+  color: var(--primary);
+  padding: 10px 0;
+  line-height: 1.4;
+  display: flex;
+}
+
+/* 2. 内层内容容器 */
+.scrolling-banner-content {
+  display: flex;
+  flex-shrink: 0;
+  width: fit-content;
+  /* 默认没有动画 */
+  animation: none; 
+  will-change: transform;
+}
+
+/* 3. 文本 <span> */
+.scrolling-banner-content span {
+  flex-shrink: 0;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  font-family: "Noto Serif SC", serif;
+}
+
+/* 4. 静态模式 (由 JS 添加) */
+.scrolling-banner.is-static {
+  justify-content: center; /* 居中显示 */
+}
+
+/* 5. 滚动模式 (由 JS 添加) */
+.scrolling-banner.is-scrolling .scrolling-banner-content {
+  /* 【关键修复】
+    CSS 定义了动画的所有属性，但动画时长 (duration)
+    读取自 JS 设置的 CSS 变量 --scroll-duration
+  */
+  animation-name: scroll-left;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--scroll-duration, 20s); /* 使用 JS 提供的变量，备用 20s */
+}
+
+/* 6. 鼠标悬停时暂停动画 */
+.scrolling-banner.is-scrolling:hover .scrolling-banner-content {
+  /* 现在这个规则可以正常工作了，
+    因为它不再被内联的 'animation' 属性覆盖。
+  */
+  animation-play-state: paused;
+}
+
+/* 7. 横幅内的链接样式 (保持不变) */
+.scrolling-banner a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: "Noto Serif SC", serif;
+}
+.scrolling-banner a:hover {
+  color: #007bff;
+}
+.dark .scrolling-banner a:hover {
+  color: #58a6ff;
+}

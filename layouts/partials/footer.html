@@ -1,0 +1,215 @@
+{{- /* --- 这是 PaperMod 主题的原始 footer.html 内容 --- */ -}}
+{{- if not (.Param "hideFooter") }}
+<footer class="footer">
+    {{- if not site.Params.footer.hideCopyright }}
+        {{- if site.Copyright }}
+        <span>{{ site.Copyright | markdownify }}</span>
+        {{- else }}
+        <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
+        {{- end }}
+        {{- print " · "}}
+    {{- end }}
+
+    {{- with site.Params.footer.text }}
+        {{ . | markdownify }}
+        {{- print " · "}}
+    {{- end }}
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+{{- end }}
+
+{{- if (not site.Params.disableScrollToTop) }}
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+{{- end }}
+
+{{- partial "extend_footer.html" . }}
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+
+{{- if (not site.Params.disableScrollToTop) }}
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+{{- end }}
+
+{{- if (not site.Params.disableThemeToggle) }}
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+{{- end }}
+
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (.Param "ShowCodeCopyButtons")) }}
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '{{- i18n "code_copy" | default "copy" }}';
+
+        function copyingDone() {
+            copybutton.innerHTML = '{{- i18n "code_copied" | default "copied!" }}';
+            setTimeout(() => {
+                copybutton.innerHTML = '{{- i18n "code_copy" | default "copy" }}';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            // td containing LineNos
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            // table containing LineNos and code
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            // code blocks not having highlight as parent class
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+{{- end }}
+
+{{- /* --- 滚动横幅 JS 逻辑 (V3 - 修复悬停暂停) --- */ -}}
+{{- if .IsHome -}}
+    {{- with site.Params.scrollingBanner }}
+        {{- if .enable }}
+        <script>
+            (function() {
+                // 1. 获取元素
+                const container = document.getElementById('scrolling-banner-container');
+                const content = document.getElementById('scrolling-banner-content');
+                
+                if (!container || !content || !content.firstElementChild) {
+                    return; // 元素不存在则退出
+                }
+
+                const originalSpan = content.firstElementChild;
+                let scrollSpeed = {{ .speed | default 60 }}; // 滚动速度 (px/秒)
+
+                // 2. 定义检查函数
+                function checkBannerScroll() {
+                    // 2.1. 重置状态：移除克隆的 span 和 CSS 类
+                    while (content.childElementCount > 1) {
+                        content.removeChild(content.lastChild);
+                    }
+                    container.classList.remove('is-scrolling', 'is-static');
+                    // 移除内联的 CSS 变量
+                    content.style.removeProperty('--scroll-duration');
+
+                    // 2.2. 获取当前宽度
+                    const containerWidth = container.clientWidth;
+                    const contentWidth = originalSpan.scrollWidth; 
+
+                    // 2.3. 判断是否需要滚动
+                    if (contentWidth > containerWidth) {
+                        // 3.1. 需要滚动
+                        // 复制内容以实现无缝滚动
+                        content.appendChild(originalSpan.cloneNode(true));
+                        
+                        // 计算滚动时长 (秒) = 宽度 / 速度
+                        const duration = contentWidth / scrollSpeed;
+                        
+                        // 3.2. 【关键修复】
+                        // 我们不设置 style.animation，而是设置 CSS 变量
+                        content.style.setProperty('--scroll-duration', `${duration}s`);
+                        
+                        // 3.3. 添加 'is-scrolling' 类来 *触发* CSS 中定义的动画
+                        container.classList.add('is-scrolling');
+
+                    } else {
+                        // 3.4. 不需要滚动：居中显示
+                        container.classList.add('is-static');
+                    }
+                }
+
+                // 页面加载时运行一次
+                // 使用 DOMContentLoaded 确保所有元素都已加载并可测量
+                document.addEventListener('DOMContentLoaded', checkBannerScroll);
+
+                // 当窗口大小改变时，重新运行检查
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(checkBannerScroll, 100); // 100ms 防抖
+                });
+            })();
+        </script>
+        {{- end }}
+    {{- end }}
+{{- end }}
+{{- /* --- JS 逻辑结束 --- */ -}}

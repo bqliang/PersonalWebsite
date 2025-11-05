@@ -55,3 +55,12 @@ params:
     #   url: "https://t.me/bqliang"
     # - name: "steam"
     #   url: "https://steamcommunity.com/profiles/76561199476892169/"
+
+# --- 滚动文字横幅配置 ---
+  scrollingBanner:
+    enable: true
+    # 您想滚动的文字。您甚至可以在这里使用 HTML 标签，比如 <a>
+    text: "👋 Hi！我是一名 Android 开发者，目前正在积极寻找新的工作机会。如果您的团队有合适岗位，欢迎<a href='mailto:bqliang@outlook.com'>与我联系 (bqliang@outlook.com)</a>"
+    # (可选) 额外的 CSS 样式, 例如 "background-color: #f0f0f0; color: #333;"
+    # speed: 75 # (可选) 滚动速度 (像素/秒)，值越大滚得越快。默认 60。
+    

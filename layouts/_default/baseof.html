@@ -1,0 +1,45 @@
+{{- if lt hugo.Version "0.146.0" }}
+{{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+
+    {{- /* --- 滚动文字横幅 (JS 控制版) --- */ -}}
+    {{- if .IsHome -}}
+        {{- with site.Params.scrollingBanner }}
+            {{- if .enable }}
+            <div class="scrolling-banner" id="scrolling-banner-container" {{- with .style }} style="{{ . | safeCSS }}"{{ end }}>
+                {{- /* 内容容器，JS 将会检查其宽度。
+                  注意：这里只放一个 <span>。JS 会在需要时复制它。
+                */ -}}
+                <div class="scrolling-banner-content" id="scrolling-banner-content">
+                    <span>{{ .text | safeHTML }}</span>
+                </div>
+            </div>
+            {{- end }}
+        {{- end }}
+    {{- end -}}
+    {{- /* --- 横幅区域结束 --- */ -}}
+
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
+</html>
