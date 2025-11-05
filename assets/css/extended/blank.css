@@ -159,10 +159,16 @@ body {
   
   /* right: 0 贴住右边 */
   right: 0; 
+
+  opacity: 0.28;
   
   transform: rotate(-180deg) translateX(10%);
   
   background-image: url("/android.svg");
+}
+
+.dark #watermark-android {
+  opacity: 0.25;
 }
 
 /* 4. Compose Logo 浮印 (使用 background-image) */
@@ -172,8 +178,12 @@ body {
   top: 15vh; /* 放在左上角 */
   left: 5vw;
   transform: rotate(10deg);
-  opacity: 0.06; /* 可以让它更淡一点 */
+  opacity: 0.1; /* 可以让它更淡一点 */
   background-image: url("/compose.svg");
+}
+
+.dark #watermark-compose {
+  opacity: 0.07;
 }
 
 /* 5. Jetpack Logo 浮印 (使用 background-image) */
@@ -183,7 +193,11 @@ body {
   bottom: 10vh; /* 放在右下角 */
   right: 5vw;
   transform: rotate(-5deg);
-  opacity: 0.06;
+  opacity: 0.16;
 
   background-image: url("/jetpack.svg");
+}
+
+.dark #watermark-jetpack {
+  opacity: 0.07;
 }
