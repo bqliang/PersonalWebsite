@@ -1,2 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>bqlaing</title><link>https://bqliang.me/</link><description>Recent content on bqlaing</description><generator>Hugo -- 0.147.8</generator><language>zh-cn</language><atom:link href="https://bqliang.me/index.xml" rel="self" type="application/rss+xml"/><item><title>👋 About me</title><link>https://bqliang.me/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bqliang.me/about/</guid><description>&lt;p>一个小青年，热爱 Android 开发 👨‍💻，喜欢羽毛球 🏸、Burger King 🍔、欧卡2 🎮&amp;hellip;&lt;/p>
-&lt;p>因为早年长期刷机，泡 XDA、酷安等论坛，对 Android 开发产生了浓厚的兴趣，从而走上了不归的 Android 开发之路&amp;hellip;&amp;hellip;&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>bqlaing</title><link>https://bqliang.me/</link><description>Recent content on bqlaing</description><generator>Hugo -- 0.152.2</generator><language>zh-cn</language><atom:link href="https://bqliang.me/index.xml" rel="self" type="application/rss+xml"/><item><title>👋 About me</title><link>https://bqliang.me/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bqliang.me/about/</guid><description>&lt;p&gt;一个小青年，热爱 Android 开发 👨‍💻，喜欢羽毛球 🏸、Burger King 🍔、欧卡2 🎮&amp;hellip;&lt;/p&gt;
+&lt;p&gt;因为早年长期刷机，泡 XDA、酷安等论坛，对 Android 开发产生了浓厚的兴趣，从而走上了不归的 Android 开发之路&amp;hellip;&amp;hellip;&lt;/p&gt;</description></item><item><title>📚 文章索引</title><link>https://bqliang.me/posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bqliang.me/posts/</guid><description>&lt;h2 id="jetpack-compose"&gt;Jetpack Compose&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7568873939033260082"target="_blank" rel="noopener noreferrer"&gt;Jetpack Navigation 3：领航未来&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7406347285901459496"target="_blank" rel="noopener noreferrer"&gt;万字长文横扫 Compose 手势操作 🤏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7395866502711738368"target="_blank" rel="noopener noreferrer"&gt;最清晰的 Compose 共享元素过渡入门文章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7394366490394443811"target="_blank" rel="noopener noreferrer"&gt;AndroidX 中的变形金刚&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7393551590458834979"target="_blank" rel="noopener noreferrer"&gt;AndroidX：新纪元的形状 (Shapes) 🔵⭐🔶&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7393312386572189736"target="_blank" rel="noopener noreferrer"&gt;Insets in Jetpack Compose 🖼️&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7386302393612238882"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 重组🔄与甜甜圈洞跳过 🍩&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7377794126098939944"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 之 CompositionLocal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7338645701658804261"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 中的副作用（side effects）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7325831147564154916"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose Semantics Modifier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7324384123841429543"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose ParentDataModifier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="源码探索"&gt;源码探索&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7320437915351334950"target="_blank" rel="noopener noreferrer"&gt;深入理解 Jetpack Compose LayoutModifier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7324011383720263718"target="_blank" rel="noopener noreferrer"&gt;深入理解 Jetpack Compose DrawModifier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7315436843852038185"target="_blank" rel="noopener noreferrer"&gt;深入理解 Jetpack Compose Modifier 接口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7316415580101050422"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose ComposedModifier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="动画"&gt;动画&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7310560146622300194"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 动画1——animate*AsState&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7311603506216910882"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 动画2——Animatable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7311957976968708131"target="_blank" rel="noopener noreferrer"&gt;Android 动画里的贝塞尔曲线&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7312353149813145641"target="_blank" rel="noopener noreferrer"&gt;Jetapck Compose 动画3——AnimationSpec&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7313979344561750066"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 动画4——Transition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7314142205684531238"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 动画5——AnimatedVisibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7314863097566593076"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose 动画6——Crossfade &amp;amp; AnimatedContent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://juejin.cn/post/7415654362971783168"target="_blank" rel="noopener noreferrer"&gt;Jetpack Compose Decay Animation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="kotlin"&gt;Kotlin&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://juejin.cn/post/7476850354796380197"target="_blank" rel="noopener noreferrer"&gt;深入浅出 Kotlin SharedFlow (上)——shareIn()&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
