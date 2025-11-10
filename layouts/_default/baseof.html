@@ -3,20 +3,25 @@
 {{- end -}}
 
 <!DOCTYPE html>
-<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+{{- $theme := site.Params.defaultTheme | default "auto" }}
+{{- if eq $theme "dark" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
+{{- else if eq $theme "light" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="light">
+{{- else }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="auto">
+{{- end }}
 
 <head>
     {{- partial "head.html" . }}
 </head>
 
-<body class="
-{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-{{- print "list" -}}
-{{- end -}}
-{{- if eq site.Params.defaultTheme `dark` -}}
-{{- print " dark" }}
-{{- end -}}
-" id="top">
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
+<body class="list" id="top">
+{{- else }}
+<body id="top">
+{{- end }}
+
 {{- /* --- 在这里添加水印 DIV (仅在首页) --- */ -}}
     {{- if .IsHome }}
     <div class="watermark" id="watermark-android"></div>
@@ -25,16 +30,13 @@
     {{- end -}}
     {{- /* --- 水印 DIV 结束 --- */ -}}
 
-    {{- partialCached "header.html" . .Page -}}
+    {{ partialCached "header.html" . .Page -}}
 
     {{- /* --- 滚动文字横幅 (JS 控制版) --- */ -}}
     {{- if .IsHome -}}
         {{- with site.Params.scrollingBanner }}
             {{- if .enable }}
             <div class="scrolling-banner" id="scrolling-banner-container" {{- with .style }} style="{{ . | safeCSS }}"{{ end }}>
-                {{- /* 内容容器，JS 将会检查其宽度。
-                  注意：这里只放一个 <span>。JS 会在需要时复制它。
-                */ -}}
                 <div class="scrolling-banner-content" id="scrolling-banner-content">
                     <span>{{ .text | safeHTML }}</span>
                 </div>
