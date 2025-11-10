@@ -22,6 +22,10 @@ menu:
       url: "/cv.pdf"
       weight: 4
 
+services:
+  googleAnalytics:
+    id: G-ZSB3WRFVDM
+
 params:
   description: "bqlaing's personal information"
   # author: bqliang
