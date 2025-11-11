@@ -201,3 +201,26 @@ body {
 .dark #watermark-jetpack {
   opacity: 0.07;
 }
+
+
+/* ----- 按钮内 svg START ----- */
+
+/* 1. 让按钮内部使用 flex 布局 */
+.profile .buttons .button-inner {
+  display: inline-flex;
+  align-items: center;  /* 关键：垂直居中对齐 icon 和文字 */
+  justify-content: center;
+}
+
+/* 2. 定义 icon (<img> 标签) 的样式 */
+.profile .buttons .button-icon {
+  /* 使用 'em' 单位，让图标高度跟随字体大小变化。*/
+  height: 1.05em;
+
+  /* 宽度设为 auto，以保持 SVG 原始的宽高比。*/
+  width: auto;
+
+  /* 在 icon 和文字之间添加一点间距 */
+  margin-right: 8px; 
+}
+/* ----- 按钮内 svg END ----- */

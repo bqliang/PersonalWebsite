@@ -42,6 +42,12 @@
             {{- range . }}
             <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}" {{- if (findRE "://" .url) }} target="_blank" {{- end }}>
                 <span class="button-inner">
+                    {{- /* --- 检查并显示 icon START --- */}}
+                    {{- if .icon }}
+                    <img src="{{ .icon | absURL }}" alt="{{ .name }} logo" class="button-icon" />
+                    {{- end }}
+                    {{- /* --- 检查并显示 icon END --- */}}
+
                     <!-- 如果 URL 中带有 "juejin"，则加粗显示 -->
                     {{- if (findRE "juejin" .url) }} <b> {{- end }}
                         {{ .name }}
