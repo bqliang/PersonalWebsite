@@ -27,11 +27,11 @@ body {
 }
 
 /* 暗黑模式下的专属颜色 */
-.dark .article-list-link a {
+[data-theme="dark"] .article-list-link a {
   color: #58a6ff; /* 暗黑模式下使用更亮、更易读的蓝色 */
 }
 
-.dark .article-list-link a:hover {
+[data-theme="dark"] .article-list-link a:hover {
   color: #80bfff; /* 暗黑模式 - 悬停时颜色更亮 */
 }
 
@@ -113,7 +113,7 @@ body {
 .scrolling-banner a:hover {
   color: #007bff;
 }
-.dark .scrolling-banner a:hover {
+[data-theme="dark"] .scrolling-banner a:hover {
   color: #58a6ff;
 }
 
@@ -167,7 +167,7 @@ body {
   background-image: url("/android.svg");
 }
 
-.dark #watermark-android {
+[data-theme="dark"] #watermark-android {
   opacity: 0.25;
 }
 
@@ -182,7 +182,7 @@ body {
   background-image: url("/compose.svg");
 }
 
-.dark #watermark-compose {
+[data-theme="dark"] #watermark-compose {
   opacity: 0.07;
 }
 
@@ -198,7 +198,7 @@ body {
   background-image: url("/jetpack.svg");
 }
 
-.dark #watermark-jetpack {
+[data-theme="dark"] #watermark-jetpack {
   opacity: 0.07;
 }
 
