@@ -229,3 +229,51 @@
     {{- end }}
 {{- end }}
 {{- /* --- JS 逻辑结束 --- */ -}}
+
+
+<!------ 文章链接动画逻辑 开始 ------>
+<script>
+  // 确保 DOM 加载完毕后再执行
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. 定义我们要用在 localStorage 的键名
+    const storageKey = 'articleLinkAnimated';
+    
+    // 2. 查找那个链接元素
+    // (注意: querySelector 只会找到页面上的第一个匹配项，这符合你的需求)
+    const linkElement = document.querySelector('.article-list-link a');
+    
+    // 3. 确保元素存在 (如果不在首页，linkElement 可能为 null)
+    if (linkElement) {
+      
+      // 4. 检查 localStorage 中是否已有标记
+      // (用户是否在过去的访问中点击过这个链接)
+      const hasClickedBefore = localStorage.getItem(storageKey);
+      
+      // 5. 如果标记不存在 (hasClickedBefore 为 null)
+      if (!hasClickedBefore) {
+        
+        // 5a. (关键) 添加 .animate-link 类，触发 CSS 动画
+        linkElement.classList.add('animate-link');
+        
+        // 5b. 为这个链接添加一个一次性的点击事件监听器
+        linkElement.addEventListener('click', function() {
+          try {
+            // 当用户点击时，立即在 localStorage 中设置标记
+            localStorage.setItem(storageKey, 'true');
+            
+            // (可选但推荐) 立即移除动画类，停止动画
+            linkElement.classList.remove('animate-link');
+
+          } catch (e) {
+            // 处理隐私模式或 localStorage 禁用的情况
+            console.error("无法写入 localStorage: ", e);
+          }
+        }, { once: true }); // { once: true } 确保这个监听器只触发一次
+      }
+      // 6. 如果标记存在 (hasClickedBefore 为 'true')
+      //    我们就什么也不做，CSS 类 .animate-link 不会被添加，也就没有动画了。
+    }
+  });
+</script>
+<!------ 文章链接动画逻辑 结束 ------>
