@@ -350,3 +350,39 @@ body {
 }
 
 /* ===== 打字机效果 END ===== */
+
+
+/* --- 响应式调整：解决副标题在移动端过长的问题 START --- */
+/* @media (max-width: 768px) 
+这个规则意味着：只在屏幕宽度小于或等于 768px 时（通常是平板和手机）
+才应用括号内的样式。
+*/
+@media (max-width: 768px) {
+  
+  .profile .subtitle {
+    /* 1. 允许文本正常换行 
+    这会覆盖上面 'white-space: nowrap;' 的设置
+    */
+    white-space: normal;
+    
+    /* 2. 移除打字机动画
+    因为基于 'width' 的打字机动画在多行文本上
+    看起来效果很奇怪（光标会错位）。
+    所以在移动端，我们选择直接显示所有文本。
+    */
+    animation: none;
+    
+    /* 3. 让宽度自动适应
+    覆盖 'width: 0'，让其恢复正常
+    */
+    width: auto;
+    
+    /* 4. 移除动画残留的光标
+    (因为动画被 'animation: none' 禁用了，
+    但边框样式可能还会残留) 
+    */
+    border-right: none;
+    padding-right: 0;
+  }
+}
+/* --- 响应式调整：解决副标题在移动端过长的问题 END --- */
