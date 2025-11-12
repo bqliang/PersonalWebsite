@@ -224,3 +224,92 @@ body {
   margin-right: 8px; 
 }
 /* ----- 按钮内 svg END ----- */
+
+
+/* ===== 打字机效果 START ===== */
+
+/* 1. 定义光标闪烁动画
+   (参照你的示例，但关键修改是使用了 CSS 变量)
+*/
+@keyframes blink-caret {
+  from, to { 
+    /* 边框透明，光标消失 */
+    border-color: transparent;
+  }
+  50% { 
+    /* 使用 --cursor-color 变量显示光标。
+      我们还提供了一个备用值 (#212121)，以防变量未定义。
+    */
+    border-color: var(--cursor-color, #212121); 
+  }
+}
+
+/* 2. 定义打字动画
+   (用于控制文字从无到有)
+*/
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* 3. 将效果应用到 PaperMod 的副标题
+   ( .profile .subtitle 是 PaperMod 用来显示副标题的 CSS 选择器)
+*/
+.profile .subtitle {
+  
+  /* --- 基础样式 (让动画生效) --- */
+
+  /* 1. 强制不换行 */
+  white-space: nowrap;
+  
+  /* 2. 隐藏还未“打”出来的文字 */
+  overflow: hidden;
+  
+  /* 3. 必须设为 inline-block 或 block 才能让 width 动画生效 */
+  display: inline-block; 
+  
+  /* 4. 动画初始状态：宽度为 0 */
+  width: 0;
+
+  /* --- 光标颜色 (关键) --- */
+
+  /* 5. (重要) 定义光标颜色的 CSS 变量 */
+  /* 这是浅色模式 (白天) 默认值 - 一个"非纯黑" */
+  --cursor-color: #212121;
+
+  /* 添加右侧内边距，在文字和光标之间创建空隙 */
+  padding-right: .15em;
+  
+  /* 6. 设置光标样式，颜色使用我们刚定义的变量 */
+  /* 光标宽度 .15em 是相对字体大小的，效果很好 */
+  border-right: .15em solid var(--cursor-color);
+  
+  /* --- 应用动画 --- */
+  
+  /* 7. 组合应用两个动画 */
+  /*
+     typing 动画:
+       3.5s: 动画总时长，你可以根据副标题长度调整。
+       steps(30, end): 步进动画。
+                      '30' 是步数，你的副标题 "👨‍💻 我挥舞着键盘和本子..." 大约 28 个字符，
+                      设置 30 步很合适。
+       forwards: 保持动画结束时的状态 (即保持 width: 100%)。
+     
+     blink-caret 动画:
+       1.2s: 光标闪烁速度。
+       infinite: 无限循环。
+  */
+  animation:
+    typing 3.5s steps(30, end) forwards,
+    blink-caret 1.2s infinite;
+}
+
+/* 4. 定义暗黑模式下的光标颜色
+   (覆盖第 5 步中定义的 --cursor-color 变量)
+*/
+[data-theme="dark"] .profile .subtitle {
+  /* 暗黑模式 (晚上) - 设置一个 "非纯白" */
+  --cursor-color: #d0d0d0;
+}
+
+/* ===== 打字机效果 END ===== */
