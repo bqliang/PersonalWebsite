@@ -13,7 +13,7 @@ body {
 
 /* 定义文章索引链接的样式 */
 .article-list-link a {
-  font-size: 16px; /* 字体稍小 (副标题是 18px) */
+  font-size: 17px; /* 字体稍小 (副标题是 18px) */
   font-weight: 500; /* 字体加粗，区别于副标题的 400 */
   text-decoration: none; /* 默认无下划线 */
   color: #007bff; /* 浅色模式下的蓝色 */
