@@ -10,7 +10,7 @@ draft: false
 - 🔥[最清晰的 Compose 共享元素过渡入门文章](https://juejin.cn/post/7395866502711738368)
 - [AndroidX 中的变形金刚](https://juejin.cn/post/7394366490394443811)
 - [AndroidX：新纪元的形状 (Shapes) 🔵⭐🔶](https://juejin.cn/post/7393551590458834979)
-- 🔥[Insets in Jetpack Compose 🖼️](https://juejin.cn/post/7393312386572189736)
+- [Insets in Jetpack Compose 🖼️](https://juejin.cn/post/7393312386572189736)
 - [Jetpack Compose 重组🔄与甜甜圈洞跳过 🍩](https://juejin.cn/post/7386302393612238882)
 - [Jetpack Compose 之 CompositionLocal](https://juejin.cn/post/7377794126098939944)
 - [Jetpack Compose 中的副作用（side effects）](https://juejin.cn/post/7338645701658804261)
@@ -19,8 +19,8 @@ draft: false
 
 ### 源码探索
 
-* 💯[深入理解 Jetpack Compose LayoutModifier](https://juejin.cn/post/7320437915351334950)
-* [深入理解 Jetpack Compose DrawModifier](https://juejin.cn/post/7324011383720263718)
+* 💯💯💯[深入理解 Jetpack Compose LayoutModifier](https://juejin.cn/post/7320437915351334950)
+* 💯[深入理解 Jetpack Compose DrawModifier](https://juejin.cn/post/7324011383720263718)
 * [深入理解 Jetpack Compose Modifier 接口](https://juejin.cn/post/7315436843852038185)
 * [Jetpack Compose ComposedModifier](https://juejin.cn/post/7316415580101050422)
 
