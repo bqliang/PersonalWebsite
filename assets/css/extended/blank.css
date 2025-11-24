@@ -386,3 +386,12 @@ body {
   }
 }
 /* --- 响应式调整：解决副标题在移动端过长的问题 END --- */
+
+
+/* --- 代码字体 START --- */
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+/* --- 代码字体 END --- */
