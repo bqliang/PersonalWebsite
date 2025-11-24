@@ -3,6 +3,20 @@ title: "📚 文章索引"
 draft: false
 ---
 
+## 👍精选文章 ✨😋🎀
+
+- `源码分析 · Compose Layout` [深入理解 Jetpack Compose LayoutModifier](https://juejin.cn/post/7320437915351334950)
+- `手势处理一网打尽` [万字长文横扫 Compose 手势操作 🤏](https://juejin.cn/post/7406347285901459496)
+- `学不会动画你来砍我` [Jetpack Compose 动画专栏](https://juejin.cn/column/7314178434339241994)
+- `源码分析 · Compose 绘制` [深入理解 Jetpack Compose DrawModifier](https://juejin.cn/post/7324011383720263718)
+- `字节码` [从喝水到学会 Android ASM 插桩](https://juejin.cn/post/7575751471841853476)
+- `收藏 99+` [最清晰的 Compose 共享元素过渡入门文章](https://juejin.cn/post/7395866502711738368)
+- `为什么不能 try { emit() }` [Flow 的异常可见性](https://www.yuque.com/bqliang/nghnzx/fwahss1f5q5tud5n)
+- `父协程到底是谁？` [2.2 父子协程及结构化结束](https://www.yuque.com/bqliang/nghnzx/hb7vccof27rils4g)
+- `谁才是一个协程？` [2.1 一个协程](https://www.yuque.com/bqliang/nghnzx/hgalcygdfq1i9sz7)
+
+---
+
 ## Jetpack Compose
 - [Jetpack Navigation 3：领航未来](https://juejin.cn/post/7568873939033260082)
 - 🔥[万字长文横扫 Compose 手势操作 🤏](https://juejin.cn/post/7406347285901459496)
@@ -33,6 +47,8 @@ draft: false
 * [Jetpack Compose 动画5——AnimatedVisibility](https://juejin.cn/post/7314142205684531238)
 * [Jetpack Compose 动画6——Crossfade & AnimatedContent](https://juejin.cn/post/7314863097566593076)
 * [Jetpack Compose Decay Animation](https://juejin.cn/post/7415654362971783168)
+
+---
 
 ## Kotlin
 
@@ -117,6 +133,8 @@ draft: false
 
 - [协程间的协作和等待](https://www.yuque.com/bqliang/nghnzx/gvao65meolgz4d5h)
 - [select：先到先得](https://www.yuque.com/bqliang/nghnzx/osqhh3sfpz5tl85k)
+
+---
 
 ## Android
 * [从喝水到学会 Android ASM 插桩](https://juejin.cn/post/7575751471841853476)
