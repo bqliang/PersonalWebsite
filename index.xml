@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>bqlaing</title><link>https://bqliang.me/</link><description>Recent content on bqlaing</description><generator>Hugo -- 0.152.2</generator><language>zh-cn</language><atom:link href="https://bqliang.me/index.xml" rel="self" type="application/rss+xml"/><item><title>👋 About me</title><link>https://bqliang.me/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bqliang.me/about/</guid><description>&lt;p&gt;一个小青年，热爱 Android 开发 👨‍💻，喜欢羽毛球 🏸、Burger King 🍔、欧卡2 🎮&amp;hellip;&lt;/p&gt;
-&lt;p&gt;因为早年长期刷机，泡 XDA、酷安等论坛，对 Android 开发产生了浓厚的兴趣，从而走上了不归的 Android 开发之路&amp;hellip;&amp;hellip;&lt;/p&gt;</description></item><item><title>📚 文章索引</title><link>https://bqliang.me/posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bqliang.me/posts/</guid><description>&lt;h2 id="精选文章-"&gt;👍精选文章 ✨😋🎀&lt;/h2&gt;
+&lt;p&gt;因为早年长期刷机，泡 XDA、酷安等论坛，对 Android 开发产生了浓厚的兴趣，从而走上了不归的 Android 开发之路&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-kotlin" data-lang="kotlin"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;object&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Me&lt;/span&gt; : AndroidDeveloper {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;val&lt;/span&gt; name = &lt;span style="color:#e6db74"&gt;&amp;#34;bqliang&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;val&lt;/span&gt; age = &lt;span style="color:#ae81ff"&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;val&lt;/span&gt; location = &lt;span style="color:#e6db74"&gt;&amp;#34;Guangzhou&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;val&lt;/span&gt; languages = listOf(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Kotlin&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Python&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Go&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; )
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hobbies = listOf(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Coding&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Reading&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Cola&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; )
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;fun&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;code&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; println(&lt;span style="color:#e6db74"&gt;&amp;#34;Writing Android apps...&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>📚 文章索引</title><link>https://bqliang.me/posts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bqliang.me/posts/</guid><description>&lt;h2 id="精选文章-"&gt;👍精选文章 ✨😋🎀&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;源码分析 · Compose Layout&lt;/code&gt; &lt;a href="https://juejin.cn/post/7320437915351334950"target="_blank" rel="noopener noreferrer"&gt;深入理解 Jetpack Compose LayoutModifier&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;手势处理一网打尽&lt;/code&gt; &lt;a href="https://juejin.cn/post/7406347285901459496"target="_blank" rel="noopener noreferrer"&gt;万字长文横扫 Compose 手势操作 🤏&lt;/a&gt;&lt;/li&gt;
