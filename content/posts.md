@@ -4,7 +4,6 @@ draft: false
 ---
 
 ## Jetpack Compose
-- [从喝水到学会 Android ASM 插桩](https://juejin.cn/post/7575751471841853476)
 - [Jetpack Navigation 3：领航未来](https://juejin.cn/post/7568873939033260082)
 - 🔥[万字长文横扫 Compose 手势操作 🤏](https://juejin.cn/post/7406347285901459496)
 - 🔥[最清晰的 Compose 共享元素过渡入门文章](https://juejin.cn/post/7395866502711738368)
@@ -120,7 +119,7 @@ draft: false
 - [select：先到先得](https://www.yuque.com/bqliang/nghnzx/osqhh3sfpz5tl85k)
 
 ## Android
-
+* [从喝水到学会 Android ASM 插桩](https://juejin.cn/post/7575751471841853476)
 * [如何共享 Android 不同模块的构建配置](https://juejin.cn/post/7289397650385993785)
 * [MotionLayout 学习笔记3 - 关键帧基础](https://juejin.cn/post/7271560798634295354)
 * [MotionLayout 学习笔记2 - 基础](https://juejin.cn/post/7271195040919371836)
